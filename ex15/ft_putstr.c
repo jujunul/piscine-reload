@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/11/07 14:08:39 by juthierr          #+#    #+#             */
+/*   Updated: 2016/11/07 14:18:14 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void		ft_putchar(char c);
 
-void		ft_print_alphabet(void)
+void		ft_putstr(char *str)
 {
-	char truc;
-
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	while (*str)
+		ft_putchar(*str++);
 }

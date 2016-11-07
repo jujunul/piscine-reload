@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/09/06 18:14:06 by juthierr          #+#    #+#             */
+/*   Updated: 2016/09/08 10:52:48 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
+#include <stdlib.h>
+#include <ctype.h>
 
-void		ft_print_alphabet(void)
+int		*ft_range(int min, int max)
 {
-	char truc;
+	int *stock;
+	int len;
+	int i;
 
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	if (min >= max)
+		return (NULL);
+	len = max - min + 1;
+	if (!(stock = (int*)malloc((int)len)))
+		return (NULL);
+	i = 0;
+	while (min < max)
+	{
+		stock[i] = min;
+		i++;
+		min++;
+	}
+	return (stock);
 }

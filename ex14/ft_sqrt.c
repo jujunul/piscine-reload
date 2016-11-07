@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/09/03 19:28:03 by juthierr          #+#    #+#             */
+/*   Updated: 2016/11/07 16:22:37 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
-
-void		ft_print_alphabet(void)
+int		ft_sqrt(int nb)
 {
-	char truc;
+	long int test;
+	long int racine;
 
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	test = 0;
+	racine = 0;
+	while (racine <= nb)
+	{
+		test = racine * racine;
+		if (test == nb)
+			return (racine);
+		racine++;
+	}
+	return (0);
+}
+
+int main(void)
+{
+	printf("%d\n", ft_sqrt(182979856));
+	return (0);
 }

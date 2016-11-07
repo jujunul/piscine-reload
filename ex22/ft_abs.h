@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/09/08 18:05:25 by juthierr          #+#    #+#             */
+/*   Updated: 2016/09/08 18:07:58 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
+#ifndef FT_ABS_H
+# define FT_ABS_H
+# define ABS(value) (value < 0 ? -value : value)
 
-void		ft_print_alphabet(void)
-{
-	char truc;
-
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
-}
+#endif

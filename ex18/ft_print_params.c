@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_param.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/09/06 10:58:59 by juthierr          #+#    #+#             */
+/*   Updated: 2016/09/07 14:57:18 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void		ft_putchar(char c);
 
-void		ft_print_alphabet(void)
+void		ft_putstr(char *str)
 {
-	char truc;
+	int i;
 
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	i = 0;
+	while (str[i])
+		ft_putchar(str[i++]);
+}
+
+int			main(int argc, char **argv)
+{
+	int i;
+
+	i = 1;
+	while (i < argc)
+	{
+		ft_putstr(argv[i++]);
+		ft_putchar('\n');
+	}
+	return (0);
 }

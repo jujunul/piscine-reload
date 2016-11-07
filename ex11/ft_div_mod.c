@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/11/07 14:00:29 by juthierr          #+#    #+#             */
+/*   Updated: 2016/11/07 14:01:55 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
-
-void		ft_print_alphabet(void)
+void		ft_div_mod(int a, int b, int *div, int *mod)
 {
-	char truc;
-
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	*div = (a / b);
+	*mod = (a % b);
 }

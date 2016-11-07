@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/11/07 13:51:04 by juthierr          #+#    #+#             */
+/*   Updated: 2016/11/07 13:53:19 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void		ft_putchar(char c);
 
-void		ft_print_alphabet(void)
+void		ft_is_negative(int n)
 {
-	char truc;
-
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	if (n >= 0)
+		ft_putchar('P');
+	else
+		ft_putchar('N');
 }

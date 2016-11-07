@@ -1,22 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/09/06 18:05:46 by juthierr          #+#    #+#             */
+/*   Updated: 2016/09/08 10:50:45 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
+#include <stdlib.h>
+#include <ctype.h>
 
-void		ft_print_alphabet(void)
+char		*ft_strcpy(char *dest, char *src)
 {
-	char truc;
+	int	i;
 
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	i = 0;
+	while (src[i] && dest[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+char		*ft_strdup(char *src)
+{
+	int		i;
+	char	*cp;
+
+	i = 0;
+	while (src[i])
+		i++;
+	if (!(cp = (char*)malloc(sizeof(char) * i + 1)))
+		return (NULL);
+	ft_strcpy(cp, src);
+	return (cp);
 }

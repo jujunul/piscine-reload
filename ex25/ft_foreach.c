@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/09/12 12:03:10 by juthierr          #+#    #+#             */
+/*   Updated: 2016/09/12 13:37:21 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
-
-void		ft_print_alphabet(void)
+void		ft_foreach(int *tab, int lenght, void (*f)(int))
 {
-	char truc;
+	int i;
 
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	i = 0;
+	while (i < lenght)
+	{
+		f(tab[i++]);
+	}
 }

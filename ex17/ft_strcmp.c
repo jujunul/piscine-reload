@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:51:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/07 13:44:55 by juthierr         ###   ########.fr       */
+/*   Created: 2016/09/03 21:49:21 by juthierr          #+#    #+#             */
+/*   Updated: 2016/09/10 16:04:43 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
-
-void		ft_print_alphabet(void)
+int		ft_strcmp(char *s1, char *s2)
 {
-	char truc;
+	int i;
 
-	truc = 'a';
-	while (truc <= 'z')
-		ft_putchar(truc++);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i])
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
