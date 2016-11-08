@@ -6,11 +6,10 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/06 18:05:46 by juthierr          #+#    #+#             */
-/*   Updated: 2016/09/08 10:50:45 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/09/07 18:48:02 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <ctype.h>
 
 char		*ft_strcpy(char *dest, char *src)
@@ -23,7 +22,7 @@ char		*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[i] = src[i];
 	return (dest);
 }
 

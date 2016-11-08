@@ -12,6 +12,7 @@
 
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdio.h>
 
 int		*ft_range(int min, int max)
 {
@@ -22,14 +23,27 @@ int		*ft_range(int min, int max)
 	if (min >= max)
 		return (NULL);
 	len = max - min + 1;
-	if (!(stock = (int*)malloc((int)len)))
+	if (!(stock = (int *)malloc(sizeof(int) * (len))))
 		return (NULL);
 	i = 0;
-	while (min < max)
+	while (min != max)
 	{
 		stock[i] = min;
 		i++;
 		min++;
 	}
 	return (stock);
+}
+
+int		main(void)
+{
+	int *test;
+	int i;
+
+	test = malloc(1000);
+	i = 0;
+	test = ft_range(10, 25);
+	while (i <= 15)
+		printf("%d\n", test[i++]);
+	return (0);
 }
