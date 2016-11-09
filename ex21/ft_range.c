@@ -6,7 +6,7 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/06 18:14:06 by juthierr          #+#    #+#             */
-/*   Updated: 2016/09/08 10:52:48 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/09 14:59:21 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,4 @@ int		*ft_range(int min, int max)
 		min++;
 	}
 	return (stock);
-}
-
-int		main(void)
-{
-	int *test;
-	int i;
-
-	test = malloc(1000);
-	i = 0;
-	test = ft_range(10, 25);
-	while (i <= 15)
-		printf("%d\n", test[i++]);
-	return (0);
 }
